@@ -13,8 +13,13 @@ wordnet_lemmatizer = WordNetLemmatizer()
 
 def clean_text(text: str) -> str:
     # removes upper cases
-    text = text.lower()
-    
+#     try:
+#         text = text.lower()
+#     except Exception as e:
+#         print("error", e)
+#         print("type", type(text))
+#         print("text:", text)
+        
     # removes punctuation
     for char in string.punctuation:
         text = text.replace(char, "")
