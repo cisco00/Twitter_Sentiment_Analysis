@@ -5,6 +5,7 @@ import nltk
 from nltk import word_tokenize
 from nltk.stem import WordNetLemmatizer
 
+nltk.download('all')
 nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('punkt')
@@ -29,6 +30,7 @@ def clean_text(text: str) -> str:
     return text
 
 class DenseTransformer(TransformerMixin):
+    
     def fit(self, X, y=None, **fit_params):
         return self
 
